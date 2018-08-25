@@ -8,7 +8,6 @@ using CampusPulse.Trade.Service;
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 using Serilog;
 
 namespace Service
@@ -22,19 +21,33 @@ namespace Service
 
         public static IWebHost BuildWebHost(string[] args)
         {
-            var webHostBuilder = WebHost.CreateDefaultBuilder(args)
+            var currentEnv = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            var baseRoot = Directory.GetCurrentDirectory();
+            Console.WriteLine(baseRoot);
+            Startup.BasePath = baseRoot;
 
-           .UseKestrel(options =>
-           {
-               options.Listen(IPAddress.Any, 443);
-           });
-            // Local debug using Local Https profile
-            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development")
-            {
-                webHostBuilder.UseUrls("http://local.dev.campuspulse.com:443");
-            }
+            var config = new ConfigurationBuilder()
+                 .SetBasePath(baseRoot)
+                 .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                 .AddJsonFile($"appsettings.{currentEnv}.json", optional: true)
+                 .AddEnvironmentVariables()
+                 .Build();
 
-            return webHostBuilder.UseStartup<Startup>().Build();
+            Log.Logger = new LoggerConfiguration()
+             //.MinimumLevel.Information()
+             //.WriteTo.RollingFile("log-{Date}.txt", LogEventLevel.Information)
+             .ReadFrom.Configuration(config)
+             .CreateLogger();
+
+            return WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>()
+                .UseContentRoot(baseRoot)
+                .UseKestrel(options =>
+                {
+                    options.ConfigureEndpoints();
+                })
+                .UseConfiguration(config)
+                .Build();
         }
     }
 }
