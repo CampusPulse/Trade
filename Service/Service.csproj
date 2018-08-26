@@ -4,6 +4,7 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <AssemblyName>CampusPulse.Trade.Service</AssemblyName>
     <RootNamespace>CampusPulse.Trade.Service</RootNamespace>
+    <UserSecretsId>8930cc37-77ba-4c16-a913-8ddd6d310a0c</UserSecretsId>
   </PropertyGroup>
   
   <ItemGroup>

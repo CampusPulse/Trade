@@ -5,7 +5,21 @@ VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{05D80C10-B3B9-4621-BA16-D91BBE8EABF5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{3E33E549-755C-49A3-AB26-8F812552B065}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampusPulse.Trade.Domain", "CampusPulse.Domain\CampusPulse.Trade.Domain.csproj", "{3BE22AA8-042B-4F03-AA2C-D51F71B49748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampusPulse.Trade.Controllers", "CampusPulse.Controllers\CampusPulse.Trade.Controllers.csproj", "{948BD3B4-0173-4F06-A930-8D90EA7C787E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampusPulse.Trade.Controllers.UnitTest", "CampusePulse.Trade.Controllers.UnitTest\CampusPulse.Trade.Controllers.UnitTest.csproj", "{BF55CB5B-8F8C-4393-9476-0950D76B0607}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampusPulse.Trade.Service.ComponentTest", "CampusPulse.Service.ComponentTest\CampusPulse.Trade.Service.ComponentTest.csproj", "{651363E7-FBE4-4EF9-83BF-BFD8D54DA429}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampusPulse.Trade.Service.Manager", "CampusPulse.Trade.Service.Manager\CampusPulse.Trade.Service.Manager.csproj", "{519F35BC-0AE3-47AA-89AE-679C1FE515B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampusPulse.Trade.DataManager", "CampusPulse.Trade.DataManager\CampusPulse.Trade.DataManager.csproj", "{9B258E18-5B6B-4607-A5DE-E2DF4AEED972}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampusPulse.Trade.DataManager.UnitTest", "CampusPulse.Trade.DataManager.UnitTest\CampusPulse.Trade.DataManager.UnitTest.csproj", "{81893E1E-ACFE-4234-A118-1A5484DE15E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CampusPulse.Trade.Service.Manager.UnitTest", "CampusPulse.Trade.Service.Manager.UnitTest\CampusPulse.Trade.Service.Manager.UnitTest.csproj", "{BC67C337-9329-4892-874A-DA7BB58ECD32}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +31,38 @@ Global
 		{05D80C10-B3B9-4621-BA16-D91BBE8EABF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05D80C10-B3B9-4621-BA16-D91BBE8EABF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05D80C10-B3B9-4621-BA16-D91BBE8EABF5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3E33E549-755C-49A3-AB26-8F812552B065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3E33E549-755C-49A3-AB26-8F812552B065}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3E33E549-755C-49A3-AB26-8F812552B065}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3E33E549-755C-49A3-AB26-8F812552B065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BE22AA8-042B-4F03-AA2C-D51F71B49748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BE22AA8-042B-4F03-AA2C-D51F71B49748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BE22AA8-042B-4F03-AA2C-D51F71B49748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BE22AA8-042B-4F03-AA2C-D51F71B49748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{948BD3B4-0173-4F06-A930-8D90EA7C787E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{948BD3B4-0173-4F06-A930-8D90EA7C787E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{948BD3B4-0173-4F06-A930-8D90EA7C787E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{948BD3B4-0173-4F06-A930-8D90EA7C787E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF55CB5B-8F8C-4393-9476-0950D76B0607}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF55CB5B-8F8C-4393-9476-0950D76B0607}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF55CB5B-8F8C-4393-9476-0950D76B0607}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF55CB5B-8F8C-4393-9476-0950D76B0607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{651363E7-FBE4-4EF9-83BF-BFD8D54DA429}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{651363E7-FBE4-4EF9-83BF-BFD8D54DA429}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{651363E7-FBE4-4EF9-83BF-BFD8D54DA429}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{651363E7-FBE4-4EF9-83BF-BFD8D54DA429}.Release|Any CPU.Build.0 = Release|Any CPU
+		{519F35BC-0AE3-47AA-89AE-679C1FE515B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{519F35BC-0AE3-47AA-89AE-679C1FE515B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{519F35BC-0AE3-47AA-89AE-679C1FE515B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{519F35BC-0AE3-47AA-89AE-679C1FE515B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B258E18-5B6B-4607-A5DE-E2DF4AEED972}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B258E18-5B6B-4607-A5DE-E2DF4AEED972}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B258E18-5B6B-4607-A5DE-E2DF4AEED972}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B258E18-5B6B-4607-A5DE-E2DF4AEED972}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81893E1E-ACFE-4234-A118-1A5484DE15E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81893E1E-ACFE-4234-A118-1A5484DE15E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81893E1E-ACFE-4234-A118-1A5484DE15E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81893E1E-ACFE-4234-A118-1A5484DE15E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC67C337-9329-4892-874A-DA7BB58ECD32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC67C337-9329-4892-874A-DA7BB58ECD32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC67C337-9329-4892-874A-DA7BB58ECD32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC67C337-9329-4892-874A-DA7BB58ECD32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
